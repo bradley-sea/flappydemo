@@ -7,7 +7,7 @@
 //
 
 #import "CFMyScene.h"
-#import "CFPipeController.h"
+#import "PipeNode.h"
 
 
 @interface CFMyScene ()
@@ -23,7 +23,6 @@
 }
 
 @property (strong,nonatomic) SKSpriteNode *mainCharacter;
-//@property (strong,nonatomic) NSMutableArray *flappyArray;
 @property (strong,nonatomic) NSMutableArray *pipes;
 @property (strong,nonatomic) NSMutableArray *downPipes;
 @property (weak,nonatomic) PipeNode *firstAvailablePipe;
@@ -36,12 +35,17 @@
 @end
 @implementation CFMyScene
 
-static const uint32_t eagleCategory =  0x1 << 0;
-static const uint32_t flappyCategory =  0x1 << 1;
+
+static const uint32_t flappyCategory =  0x1 << 0;
+static const uint32_t pipeCategory =  0x1 << 1;
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
+        
+        NSLog(@"%@",NSStringFromCGSize(size));
+        NSLog(@"%@",NSStringFromCGSize(self.view.frame.size));
+        
         
         self.physicsWorld.contactDelegate = self;
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
@@ -80,8 +84,9 @@ static const uint32_t flappyCategory =  0x1 << 1;
     self.mainCharacter.physicsBody.affectedByGravity =YES;
     self.mainCharacter.physicsBody.allowsRotation = NO;
     self.mainCharacter.physicsBody.mass = 0.02;
-    self.mainCharacter.physicsBody.categoryBitMask = eagleCategory;
-    self.mainCharacter.physicsBody.contactTestBitMask = flappyCategory;
+    self.mainCharacter.physicsBody.categoryBitMask = flappyCategory;
+    self.mainCharacter.physicsBody.contactTestBitMask = pipeCategory;
+    self.mainCharacter.physicsBody.collisionBitMask = pipeCategory;
 }
 -(void)setupPipes
 {
@@ -89,6 +94,11 @@ static const uint32_t flappyCategory =  0x1 << 1;
     for (int i = 0; i < kNumOfPipes; i++)
     {
         PipeNode *pipe = [PipeNode spriteNodeWithImageNamed:@"pipe.png"];
+        pipe.position = CGPointMake(600, 0);
+        pipe.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:pipe.size];
+        pipe.physicsBody.affectedByGravity = NO;
+        pipe.physicsBody.dynamic = NO;
+        pipe.physicsBody.categoryBitMask = pipeCategory;
         [self.pipes insertObject:pipe atIndex:0];
         //pipe.delegate = self;
         pipe.hidden = YES;
@@ -104,6 +114,11 @@ static const uint32_t flappyCategory =  0x1 << 1;
     for (int i = 0; i < kNumOfPipes; i++)
     {
         PipeNode *pipe = [PipeNode spriteNodeWithImageNamed:@"downpipe.png"];
+         pipe.position = CGPointMake(600, 0);
+        pipe.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:pipe.size];
+        pipe.physicsBody.affectedByGravity = NO;
+        pipe.physicsBody.dynamic = NO;
+        pipe.physicsBody.categoryBitMask = pipeCategory;
         [self.downPipes insertObject:pipe atIndex:0];
         //pipe.delegate = self;
         pipe.hidden = YES;
@@ -129,36 +144,30 @@ static const uint32_t flappyCategory =  0x1 << 1;
 
 -(void)update:(CFTimeInterval)currentTime {
     
-    //NSLog(@" %f",self.view.frame.size.height);
+    
     _deltaTime = currentTime - _previousTime;
     _previousTime = currentTime;
-    //NSLog(@" %f",_deltaTime);
-    
     _timeSinceLastPipes += _deltaTime;
     
     if (_timeSinceLastPipes > _nextPipeTime)
     {
-        //NSLog(@"time for a pipe");
+  
         PipeNode *pipe = self.firstAvailablePipe;
         float randomY = [self randomValueBetween:-100 andValue:100];
         NSLog(@" %f",pipe.size.height);
         pipe.position = CGPointMake(600, randomY);
-        //[self addChild:pipe];
         CGPoint location = CGPointMake(-30, randomY);
         
         SKAction *moveAction = [SKAction moveTo:location duration:3];
         SKAction *endAction = [SKAction runBlock:^{
             [self doneWithPipe:pipe];
         }];
-        
         SKAction *sequence = [SKAction sequence:@[moveAction,endAction]];
-        
         [pipe runAction:sequence];
         
         PipeNode *downPipe = self.firstAvailableDownPipe;
         float downY = randomY + 350;
         downPipe.position = CGPointMake(600, downY);
-        //[self addChild:downPipe];
         CGPoint newLocation = CGPointMake(-30, downY);
         SKAction *downMoveAction = [SKAction moveTo:newLocation duration:3];
         SKAction *downEndAction = [SKAction runBlock:^{
@@ -218,7 +227,7 @@ static const uint32_t flappyCategory =  0x1 << 1;
 -(void)didBeginContact:(SKPhysicsContact *)contact
 {
     
-    NSLog(@"contact");
+    NSLog(@"contact!!");
 }
 
 @end

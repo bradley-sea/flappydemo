@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A232B00B191FED520015B9B1 /* PipeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A232B00A191FED520015B9B1 /* PipeNode.m */; };
-		A232B00E191FEE190015B9B1 /* CFPipeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A232B00D191FEE190015B9B1 /* CFPipeController.m */; };
 		A232B05E19200D390015B9B1 /* downpipe.png in Resources */ = {isa = PBXBuildFile; fileRef = A232B05D19200D390015B9B1 /* downpipe.png */; };
 		A2951E1918B28F7500031812 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A2951E1718B28F7500031812 /* spark.png */; };
 		A29DFF3818B27C2C00BE77D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29DFF3718B27C2C00BE77D4 /* Foundation.framework */; };
@@ -21,7 +20,6 @@
 		A29DFF4D18B27C2C00BE77D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A29DFF4B18B27C2C00BE77D4 /* Main.storyboard */; };
 		A29DFF5018B27C2C00BE77D4 /* CFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29DFF4F18B27C2C00BE77D4 /* CFViewController.m */; };
 		A29DFF5318B27C2C00BE77D4 /* CFMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A29DFF5218B27C2C00BE77D4 /* CFMyScene.m */; };
-		A29DFF5518B27C2C00BE77D4 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = A29DFF5418B27C2C00BE77D4 /* Spaceship.png */; };
 		A29DFF5718B27C2C00BE77D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A29DFF5618B27C2C00BE77D4 /* Images.xcassets */; };
 		A29DFF5E18B27C2C00BE77D4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29DFF5D18B27C2C00BE77D4 /* XCTest.framework */; };
 		A29DFF5F18B27C2C00BE77D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29DFF3718B27C2C00BE77D4 /* Foundation.framework */; };
@@ -29,7 +27,6 @@
 		A29DFF6818B27C2C00BE77D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A29DFF6618B27C2C00BE77D4 /* InfoPlist.strings */; };
 		A29DFF6A18B27C2C00BE77D4 /* spritedemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A29DFF6918B27C2C00BE77D4 /* spritedemoTests.m */; };
 		A29DFF7418B27DC200BE77D4 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A29DFF7318B27DC200BE77D4 /* background.png */; };
-		A29DFF7618B2824600BE77D4 /* eagle.png in Resources */ = {isa = PBXBuildFile; fileRef = A29DFF7518B2824600BE77D4 /* eagle.png */; };
 		A29DFF7818B2874D00BE77D4 /* flappy.png in Resources */ = {isa = PBXBuildFile; fileRef = A29DFF7718B2874D00BE77D4 /* flappy.png */; };
 		A29DFF7C18B28E4200BE77D4 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A29DFF7A18B28E4200BE77D4 /* spark.png */; };
 		A2C84CA718B2930600FAE395 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = A2C84CA618B2930600FAE395 /* Explosion.sks */; };
@@ -49,8 +46,6 @@
 /* Begin PBXFileReference section */
 		A232B009191FED520015B9B1 /* PipeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PipeNode.h; sourceTree = "<group>"; };
 		A232B00A191FED520015B9B1 /* PipeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PipeNode.m; sourceTree = "<group>"; };
-		A232B00C191FEE190015B9B1 /* CFPipeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFPipeController.h; path = ../CFPipeController.h; sourceTree = "<group>"; };
-		A232B00D191FEE190015B9B1 /* CFPipeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFPipeController.m; path = ../CFPipeController.m; sourceTree = "<group>"; };
 		A232B05D19200D390015B9B1 /* downpipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downpipe.png; sourceTree = "<group>"; };
 		A2951E1718B28F7500031812 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		A29DFF3418B27C2C00BE77D4 /* spritedemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spritedemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +64,6 @@
 		A29DFF4F18B27C2C00BE77D4 /* CFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFViewController.m; sourceTree = "<group>"; };
 		A29DFF5118B27C2C00BE77D4 /* CFMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFMyScene.h; sourceTree = "<group>"; };
 		A29DFF5218B27C2C00BE77D4 /* CFMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFMyScene.m; sourceTree = "<group>"; };
-		A29DFF5418B27C2C00BE77D4 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		A29DFF5618B27C2C00BE77D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A29DFF5C18B27C2C00BE77D4 /* spritedemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spritedemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29DFF5D18B27C2C00BE77D4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -77,7 +71,6 @@
 		A29DFF6718B27C2C00BE77D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A29DFF6918B27C2C00BE77D4 /* spritedemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = spritedemoTests.m; sourceTree = "<group>"; };
 		A29DFF7318B27DC200BE77D4 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		A29DFF7518B2824600BE77D4 /* eagle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eagle.png; sourceTree = "<group>"; };
 		A29DFF7718B2874D00BE77D4 /* flappy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flappy.png; sourceTree = "<group>"; };
 		A29DFF7A18B28E4200BE77D4 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		A2C84CA618B2930600FAE395 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
@@ -152,17 +145,13 @@
 				A29DFF4B18B27C2C00BE77D4 /* Main.storyboard */,
 				A29DFF4E18B27C2C00BE77D4 /* CFViewController.h */,
 				A29DFF4F18B27C2C00BE77D4 /* CFViewController.m */,
-				A232B00C191FEE190015B9B1 /* CFPipeController.h */,
-				A232B00D191FEE190015B9B1 /* CFPipeController.m */,
 				A232B009191FED520015B9B1 /* PipeNode.h */,
 				A232B00A191FED520015B9B1 /* PipeNode.m */,
 				A29DFF5118B27C2C00BE77D4 /* CFMyScene.h */,
 				A29DFF5218B27C2C00BE77D4 /* CFMyScene.m */,
 				A29DFF7A18B28E4200BE77D4 /* spark.png */,
-				A29DFF7518B2824600BE77D4 /* eagle.png */,
 				A29DFF7718B2874D00BE77D4 /* flappy.png */,
 				A29DFF7318B27DC200BE77D4 /* background.png */,
-				A29DFF5418B27C2C00BE77D4 /* Spaceship.png */,
 				A29DFF5618B27C2C00BE77D4 /* Images.xcassets */,
 				A29DFF4018B27C2C00BE77D4 /* Supporting Files */,
 			);
@@ -279,11 +268,9 @@
 				A232B05E19200D390015B9B1 /* downpipe.png in Resources */,
 				A29DFF7C18B28E4200BE77D4 /* spark.png in Resources */,
 				A29DFF7418B27DC200BE77D4 /* background.png in Resources */,
-				A29DFF7618B2824600BE77D4 /* eagle.png in Resources */,
 				A29DFF5718B27C2C00BE77D4 /* Images.xcassets in Resources */,
 				A2951E1918B28F7500031812 /* spark.png in Resources */,
 				A2D83615191FD8F3007A6B5E /* pipe.png in Resources */,
-				A29DFF5518B27C2C00BE77D4 /* Spaceship.png in Resources */,
 				A2C84CA718B2930600FAE395 /* Explosion.sks in Resources */,
 				A29DFF4D18B27C2C00BE77D4 /* Main.storyboard in Resources */,
 				A29DFF7818B2874D00BE77D4 /* flappy.png in Resources */,
@@ -307,7 +294,6 @@
 			files = (
 				A232B00B191FED520015B9B1 /* PipeNode.m in Sources */,
 				A29DFF4618B27C2C00BE77D4 /* main.m in Sources */,
-				A232B00E191FEE190015B9B1 /* CFPipeController.m in Sources */,
 				A29DFF4A18B27C2C00BE77D4 /* CFAppDelegate.m in Sources */,
 				A29DFF5018B27C2C00BE77D4 /* CFViewController.m in Sources */,
 				A29DFF5318B27C2C00BE77D4 /* CFMyScene.m in Sources */,
